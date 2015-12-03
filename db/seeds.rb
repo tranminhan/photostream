@@ -5,3 +5,10 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+100.times do |n| 
+  Photo.create(username: Faker::Name.name, 
+               caption: Faker::Lorem.paragraph,
+               url: 'http://lorempixel.com/400/200/',
+               likes_count: Faker::Number.number(4))
+end
