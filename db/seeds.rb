@@ -12,3 +12,10 @@
                url: 'http://lorempixel.com/400/200/',
                likes_count: Faker::Number.number(4))
 end
+
+
+Photo.all.each do |photo|
+  rand(10).times do 
+    photo.comments << Comment.new( content: Faker::Lorem.paragraph, username: Faker::Name.name )
+  end
+end
